@@ -20,7 +20,8 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'sjl/gundo.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'ervandew/supertab'
-Bundle 'vim-scripts/YankRing.vim'
+"Bundle 'vim-scripts/YankRing.vim'
+Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX'
 Bundle 'kevinw/pyflakes-vim'
 Bundle 'davidhalter/jedi-vim'
@@ -120,6 +121,12 @@ map <F8> :nohlsearch<CR>
 map! òò <C-c>
 " map! òò <Esc>
 vmap òò <Esc>
+
+nmap <C-p> <Plug>yankstack_substitute_older_paste
+nmap <C-P> <Plug>yankstack_substitute_newer_paste
+call yankstack#setup()  " must setup yankstack before remapping Y
+" Make Y behave like C and D
+nnoremap Y y$
 
 nmap <CR> :
 vmap <CR> :
