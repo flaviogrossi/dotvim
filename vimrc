@@ -83,7 +83,7 @@ set switchbuf=useopen   " if a buffer is already opened, switch to it
 set confirm  " don't abort commands, ask me
 
 " hi ColorColumn guibg=lightgrey
-if v:version > 703
+if v:version >= 703
     set colorcolumn=+1     " colora la colonna textwidth+1
 endif
 
