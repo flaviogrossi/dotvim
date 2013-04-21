@@ -73,7 +73,7 @@ set ttyfast
 
 set gdefault  " replace every occurence in a line by default
 
-set textwidth=80
+set textwidth=79
 
 set splitright     " open new vsplit to the right
 set splitbelow     " open new split at the bottom
