@@ -27,6 +27,7 @@ Bundle 'kevinw/pyflakes-vim'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'tpope/vim-surround'
+Bundle 'nelstrom/vim-visual-star-search'
 
 " don't close win when closing buffer
 Bundle 'moll/vim-bbye'
