@@ -26,6 +26,9 @@ Bundle 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX'
 Bundle 'kevinw/pyflakes-vim'
 Bundle 'davidhalter/jedi-vim'
 
+" don't close win when closing buffer
+Bundle 'moll/vim-bbye'
+
 
 filetype plugin indent on     " required!
 "
