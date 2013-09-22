@@ -91,6 +91,9 @@ set switchbuf=useopen   " if a buffer is already opened, switch to it
 
 set confirm  " don't abort commands, ask me
 
+" set nice listchars
+set listchars=tab:▸\ ,eol:¬,trail:␣
+
 " hi ColorColumn guibg=lightgrey
 if exists('+colorcolumn')
     set colorcolumn=+1     " highlight the textwidth+1 column
