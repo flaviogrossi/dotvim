@@ -91,12 +91,19 @@ set switchbuf=useopen   " if a buffer is already opened, switch to it
 
 set confirm  " don't abort commands, ask me
 
+set clipboard=unnamed  " yank to system clipboard
+
 " set nice listchars
 set listchars=tab:▸\ ,eol:¬,trail:␣
 
 " hi ColorColumn guibg=lightgrey
 if exists('+colorcolumn')
     set colorcolumn=+1     " highlight the textwidth+1 column
+endif
+
+if v:version > 703 || v:version == 703 && has("patch541")
+    set formatoptions+=j    " delete comment char on second line when joining
+                            " two commented lines
 endif
 
 map ,rn :set invrelativenumber<Esc>  " toggle relativenumber with <leader>-rn
@@ -209,3 +216,7 @@ autocmd BufWinEnter *.js silent setlocal nonumber foldcolumn=0
 autocmd BufWinEnter *.thrift silent setlocal nonumber foldcolumn=0
 autocmd BufWinEnter *.css silent setlocal nonumber foldcolumn=0
  
+" read local settings if found
+if filereadable(expand("~/.vimrc.local"))
+    source ~/.vimrc.local
+endif
