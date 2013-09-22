@@ -26,8 +26,6 @@ Bundle 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX'
 Bundle 'kevinw/pyflakes-vim'
 Bundle 'davidhalter/jedi-vim'
 
-" My Bundles here:
-"
 
 filetype plugin indent on     " required!
 "
@@ -83,8 +81,8 @@ set switchbuf=useopen   " if a buffer is already opened, switch to it
 set confirm  " don't abort commands, ask me
 
 " hi ColorColumn guibg=lightgrey
-if v:version >= 703
-    set colorcolumn=+1     " colora la colonna textwidth+1
+if exists('+colorcolumn')
+    set colorcolumn=+1     " highlight the textwidth+1 column
 endif
 
 map ,rn :set invrelativenumber<Esc>  " toggle relativenumber with <leader>-rn
