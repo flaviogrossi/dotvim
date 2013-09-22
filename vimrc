@@ -29,6 +29,10 @@ Bundle 'davidhalter/jedi-vim'
 Bundle 'tsaleh/vim-matchit'
 Bundle 'tpope/vim-surround'
 Bundle 'nelstrom/vim-visual-star-search'
+Bundle 'kana/vim-textobj-user'
+Bundle 'bps/vim-textobj-python'
+Bundle 'kana/vim-textobj-indent'
+Bundle 'rbonvall/vim-textobj-latex'
 
 " don't close win when closing buffer
 Bundle 'moll/vim-bbye'
