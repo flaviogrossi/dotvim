@@ -25,6 +25,7 @@ Bundle 'maxbrunsfeld/vim-yankstack'
 Bundle 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX'
 Bundle 'kevinw/pyflakes-vim'
 Bundle 'davidhalter/jedi-vim'
+Bundle 'tsaleh/vim-matchit'
 
 " don't close win when closing buffer
 Bundle 'moll/vim-bbye'
