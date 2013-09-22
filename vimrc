@@ -8,7 +8,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
@@ -62,21 +62,21 @@ filetype plugin indent on     " required!
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-set nobackup		" do not keep a backup file
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
+set nobackup     " do not keep a backup file
+set history=50   " keep 50 lines of command line history
+set ruler        " show the cursor position all the time
+set showcmd      " display incomplete commands
+set incsearch    " do incremental searching
 set autoindent
 set tabstop=4
 set shiftwidth=4
 set smarttab
-set expandtab       " replace tabs with spaces
+set expandtab    " replace tabs with spaces
 set softtabstop=4
 set wildmenu
 set wildmode=longest:full
-set scrolloff=3		" keep 3 lines below and above cursor when scrolling
-set hidden 		" allow to switch between unsaved buffers
+set scrolloff=3 " keep 3 lines below and above cursor when scrolling
+set hidden      " allow to switch between unsaved buffers
 
 set ttyfast
 
@@ -192,7 +192,7 @@ endif
 " Only define it when not defined already.
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+         \ | wincmd p | diffthis
 endif
 
 " ctrlp
@@ -215,7 +215,7 @@ autocmd BufWinEnter *.tac silent setlocal nonumber foldcolumn=0
 autocmd BufWinEnter *.js silent setlocal nonumber foldcolumn=0
 autocmd BufWinEnter *.thrift silent setlocal nonumber foldcolumn=0
 autocmd BufWinEnter *.css silent setlocal nonumber foldcolumn=0
- 
+
 " read local settings if found
 if filereadable(expand("~/.vimrc.local"))
     source ~/.vimrc.local
