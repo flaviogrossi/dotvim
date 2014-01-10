@@ -33,6 +33,7 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'bps/vim-textobj-python'
 Bundle 'kana/vim-textobj-indent'
 Bundle 'rbonvall/vim-textobj-latex'
+Bundle 'vim-scripts/ShowMarks'
 
 " don't close win when closing buffer
 Bundle 'moll/vim-bbye'
@@ -128,6 +129,8 @@ map <F9> :ls<CR>:b
 
 let NERD_c_alt_style=1  " c default comments
 let NERDSpaceDelims=1   " add space after comments
+
+let g:showmarks_enable=0
 
 " disable latex auto folding
 let g:Tex_AutoFolding = 0
