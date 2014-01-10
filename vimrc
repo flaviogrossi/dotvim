@@ -95,7 +95,9 @@ set confirm  " don't abort commands, ask me
 set clipboard=unnamed  " yank to system clipboard
 
 " set nice listchars
-set listchars=tab:▸\ ,eol:¬,trail:␣
+" set listchars=tab:▸\ ,eol:¬,trail:␣
+set listchars=tab:▸\ ,trail:␣
+set list
 
 " hi ColorColumn guibg=lightgrey
 if exists('+colorcolumn')
