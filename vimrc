@@ -221,6 +221,11 @@ autocmd BufWinEnter *.js silent setlocal nonumber foldcolumn=0
 autocmd BufWinEnter *.thrift silent setlocal nonumber foldcolumn=0
 autocmd BufWinEnter *.css silent setlocal nonumber foldcolumn=0
 
+if &t_Co > 2 || has("gui_running")
+    hi SpellBad ctermbg=1
+endif
+
+
 " read local settings if found
 if filereadable(expand("~/.vimrc.local"))
     source ~/.vimrc.local
