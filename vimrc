@@ -223,6 +223,7 @@ autocmd BufWinEnter *.css silent setlocal nonumber foldcolumn=0
 
 if &t_Co > 2 || has("gui_running")
     hi SpellBad ctermbg=1
+    hi Search ctermbg=1
 endif
 
 
