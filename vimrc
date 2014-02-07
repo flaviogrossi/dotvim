@@ -35,6 +35,7 @@ Bundle 'bps/vim-textobj-python'
 Bundle 'kana/vim-textobj-indent'
 Bundle 'rbonvall/vim-textobj-latex'
 Bundle 'vim-scripts/ShowMarks'
+Bundle 'vim-scripts/LargeFile'
 
 " don't close win when closing buffer
 Bundle 'moll/vim-bbye'
@@ -213,6 +214,9 @@ let g:ctrlp_custom_ignore = { 'dir':  '\v[\/](tags|branches)$' }
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': [],
                            \ 'passive_filetypes': ['python', 'javascript'] }
+
+" LargeFile
+let g:LargeFile=5
 
 
 " disable annoying numbering and foldcolumn on ydin files
