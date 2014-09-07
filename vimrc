@@ -36,6 +36,7 @@ Bundle 'kana/vim-textobj-indent'
 Bundle 'rbonvall/vim-textobj-latex'
 Bundle 'vim-scripts/ShowMarks'
 Bundle 'vim-scripts/LargeFile'
+Bundle 'wting/rust.vim'
 
 " don't close win when closing buffer
 Bundle 'moll/vim-bbye'
