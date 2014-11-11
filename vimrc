@@ -141,6 +141,9 @@ let g:showmarks_enable=0
 let g:Tex_AutoFolding = 0
 let g:tex_flavor='latex'
 
+" enable spell check for latex files
+autocmd FileType tex set spell
+
 let g:yankring_persist = 0
 let g:yankring_history_dir = '$HOME/.vim/'
 
@@ -218,6 +221,11 @@ let g:syntastic_mode_map = { 'mode': 'active',
 
 " LargeFile
 let g:LargeFile=5
+
+" use xmllint if found
+if executable("xmllint")
+    au FileType xml setlocal equalprg="xmllint --format --recover -"
+endif
 
 
 " disable annoying numbering and foldcolumn on ydin files
