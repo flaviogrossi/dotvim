@@ -37,9 +37,10 @@ Bundle 'rbonvall/vim-textobj-latex'
 Bundle 'vim-scripts/ShowMarks'
 Bundle 'vim-scripts/LargeFile'
 Bundle 'wting/rust.vim'
-
 " don't close win when closing buffer
 Bundle 'moll/vim-bbye'
+
+Bundle 'vim-scripts/scratch.vim'
 
 
 filetype plugin indent on     " required!
