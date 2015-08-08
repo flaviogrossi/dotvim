@@ -63,6 +63,7 @@ filetype plugin indent on     " required!
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed.
 
+let mapleader = "\<Space>"
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -113,7 +114,8 @@ if v:version > 703 || v:version == 703 && has("patch541")
                             " two commented lines
 endif
 
-map ,rn :set invrelativenumber<Esc>  " toggle relativenumber with <leader>-rn
+" toggle hybrid numbering
+nnoremap <silent><leader>n :set invrelativenumber invnumber<Esc>
 
 highlight Pmenu ctermbg=green cterm=bold " set completion menu color and style
 
