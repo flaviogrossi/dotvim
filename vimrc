@@ -41,6 +41,7 @@ Bundle 'wting/rust.vim'
 Bundle 'moll/vim-bbye'
 
 Bundle 'vim-scripts/scratch.vim'
+Bundle 'elixir-lang/vim-elixir'
 
 
 filetype plugin indent on     " required!
