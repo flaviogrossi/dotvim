@@ -115,6 +115,7 @@ if v:version > 703 || v:version == 703 && has("patch541")
 endif
 
 " toggle hybrid numbering
+let g:jedi#usages_command = "<leader>u" " first, rename jedi fun
 nnoremap <silent><leader>n :set invrelativenumber invnumber<Esc>
 
 highlight Pmenu ctermbg=green cterm=bold " set completion menu color and style
