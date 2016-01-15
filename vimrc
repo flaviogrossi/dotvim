@@ -4,65 +4,48 @@ set nocompatible
 
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'kien/ctrlp.vim'
-Bundle 'hallettj/jslint.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'klen/rope-vim'
-" Bundle 'scrooloose/syntastic'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'sjl/gundo.vim'
-" Bundle 'scrooloose/nerdcommenter'
-Bundle 'tpope/vim-commentary'
-Bundle 'ervandew/supertab'
-" Bundle 'vim-scripts/YankRing.vim'
-Bundle 'maxbrunsfeld/vim-yankstack'
-Bundle 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX'
-Bundle 'kevinw/pyflakes-vim'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'nelstrom/vim-visual-star-search'
-Bundle 'kana/vim-textobj-user'
-Bundle 'bps/vim-textobj-python'
-Bundle 'kana/vim-textobj-indent'
-Bundle 'rbonvall/vim-textobj-latex'
-Bundle 'vim-scripts/ShowMarks'
-Bundle 'vim-scripts/LargeFile'
-Bundle 'wting/rust.vim'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'hallettj/jslint.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'klen/rope-vim'
+" Plugin 'scrooloose/syntastic'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'sjl/gundo.vim'
+" Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-commentary'
+Plugin 'ervandew/supertab'
+" Plugin 'vim-scripts/YankRing.vim'
+Plugin 'maxbrunsfeld/vim-yankstack'
+Plugin 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX'
+Plugin 'kevinw/pyflakes-vim'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'vim-scripts/matchit.zip'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'kana/vim-textobj-user'
+Plugin 'bps/vim-textobj-python'
+Plugin 'kana/vim-textobj-indent'
+Plugin 'rbonvall/vim-textobj-latex'
+Plugin 'vim-scripts/ShowMarks'
+Plugin 'vim-scripts/LargeFile'
+Plugin 'wting/rust.vim'
 " don't close win when closing buffer
-Bundle 'moll/vim-bbye'
+Plugin 'moll/vim-bbye'
 
-Bundle 'vim-scripts/scratch.vim'
-Bundle 'elixir-lang/vim-elixir'
+Plugin 'vim-scripts/scratch.vim'
+Plugin 'elixir-lang/vim-elixir'
 
 
+call vundle#end()             " required!
 filetype plugin indent on     " required!
-"
-" Brief help
-" original repos on github
-" Bundle 'tpope/vim-fugitive'
-" Bundle 'Lokaltog/vim-easymotion'
-" vim-scripts repos
-" Bundle 'L9'
-" Bundle 'FuzzyFinder'
-" non github repos
-" Bundle 'git://git.wincent.com/command-t.git'
-" ...
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed.
 
 let mapleader = "\<Space>"
 
