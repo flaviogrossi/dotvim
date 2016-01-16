@@ -196,7 +196,7 @@ endif
 
 " ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*/.svn/*,*/.git/*,*/.hg/*
+set wildignore+=*.so,*.swp,*.zip,*.pyc,*/.svn/*,*/.git/*,*/.hg/*
 let g:ctrlp_map = '<c-t>'  " default c-p is already used by yankring
 
 " Syntastic
