@@ -21,9 +21,9 @@ Plug 'vim-scripts/scratch.vim'
 " don't close win when closing buffer
 Plug 'moll/vim-bbye'
 
-" Plugin 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic', { 'for': 'python' }
 Plug 'kevinw/pyflakes-vim', { 'for': 'python' }
-" Plugin 'davidhalter/jedi-vim', { 'for': 'python' }
+" Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'bps/vim-textobj-python', { 'for': 'python' }
 Plug 'hallettj/jslint.vim', { 'for': 'javascript' }
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
@@ -86,9 +86,10 @@ let g:SuperTabDefaultCompletionType = 'context'
 
 nmap <C-p> <Plug>yankstack_substitute_older_paste
 nmap <C-P> <Plug>yankstack_substitute_newer_paste
-if exists(':yankstack#setup')
+try
     call yankstack#setup()  " must setup yankstack before remapping Y
-endif
+catch
+endtry
 " Make Y behave like C and D
 nnoremap Y y$
 
