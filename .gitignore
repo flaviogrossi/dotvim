@@ -1,5 +1,5 @@
-bundle/
-
-yankring_history_v2.txt
+plugged/
+autoload/plug.vim
 .netrwhist
 spell/
+*.sw[op]

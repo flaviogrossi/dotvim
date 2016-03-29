@@ -10,8 +10,7 @@ setlocal guioptions-=L
 
 set mousemodel=popup    " for right-click menu on bad spelled words
 
-setlocal confirm 			 " don't abort commands, ask me
-setlocal guioptions+=c 		 " don't use graphic dialogs
+setlocal guioptions+=c  " don't use graphic dialogs
 
 " start with as many lines as possible (vertically maximized)
 " set lines=999
@@ -21,4 +20,3 @@ au GUIEnter * set lines=999 columns=90
 set cursorline
 
 set guifont=DejaVu\ Sans\ Mono\ 9
-
