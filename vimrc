@@ -2,11 +2,6 @@ call plug#begin('~/.vim/plugged')
 " Use single quotes for plugin names
 Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-commentary'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'sjl/gundo.vim'
-Plug 'ervandew/supertab'
 Plug 'vim-scripts/matchit.zip'
 Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'tpope/vim-surround'
@@ -14,23 +9,10 @@ Plug 'tpope/vim-repeat'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-indent'
-" Plug 'vim-scripts/ShowMarks'
 Plug 'vim-scripts/LargeFile'
 Plug 'vim-scripts/scratch.vim'
-" Plug 'jacquesbh/vim-showmarks'
 " don't close win when closing buffer
 Plug 'moll/vim-bbye'
-
-" Plugin 'scrooloose/syntastic'
-Plug 'kevinw/pyflakes-vim', { 'for': 'python' }
-" Plugin 'davidhalter/jedi-vim', { 'for': 'python' }
-Plug 'bps/vim-textobj-python', { 'for': 'python' }
-Plug 'hallettj/jslint.vim', { 'for': 'javascript' }
-Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
-Plug 'wting/rust.vim', { 'for': 'rust' }
-Plug 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX', { 'for': 'tex' }
-Plug 'rbonvall/vim-textobj-latex', { 'for': 'tex' }
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 
 call plug#end()
 
@@ -81,8 +63,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " In NERDTree filelist, ignore some file types
 let NERDTreeIgnore = ['\.py[co]$', '__pycache__', '\.o$']
 
-let g:SuperTabDefaultCompletionType = 'context'
-let g:SuperTabDefaultCompletionType = 'context'
 
 nmap <C-p> <Plug>yankstack_substitute_older_paste
 nmap <C-P> <Plug>yankstack_substitute_newer_paste
@@ -95,10 +75,6 @@ nnoremap Y y$
 let g:ctrlp_map = '<c-t>'  " default c-p is already used by yankstack
 
 let g:LargeFile=5  " large file is when size is > 5MB
-
-" do not set nu or fc behind my back using vim modeline
-autocmd BufWinEnter * silent setlocal nonumber foldcolumn=0
-
 
 augroup reload_vimrc " {
     autocmd!
