@@ -52,7 +52,7 @@ set splitright " open new vsplit to the right
 set splitbelow " open new split at the bottom
 set switchbuf=useopen  " if a buffer is already opened, switch to it
 set confirm  " don't abort commands, ask me
-set clipboard=unnamed  " yank to system clipboard
+set clipboard=unnamed,unnamedplus  " yank to system clipboard
 set listchars=tab:▸\ ,trail:␣
 set list
 set hlsearch
