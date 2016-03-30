@@ -75,6 +75,7 @@ nnoremap <silent><leader>n :set invrelativenumber invnumber<Esc>
 " " ` is more useful but harder to type, so swap them
 nnoremap ' `
 nnoremap ` '
+map <F2> :NERDTreeToggle<CR>
 
 " Close vim on :q if NERDTree is the only opened buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
