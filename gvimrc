@@ -19,4 +19,7 @@ au GUIEnter * set lines=999 columns=90
 " highlight current line
 set cursorline
 
+" properly maximize
+set ghr=0
+
 set guifont=DejaVu\ Sans\ Mono\ 9
