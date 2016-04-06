@@ -34,17 +34,20 @@ set splitright " open new vsplit to the right
 set splitbelow " open new split at the bottom
 set switchbuf=useopen  " if a buffer is already opened, switch to it
 set confirm  " don't abort commands, ask me
-set clipboard=unnamed  " yank to system clipboard
+set clipboard=unnamed,unnamedplus  " yank to system clipboard
 set listchars=tab:▸\ ,trail:␣
 set list
 set hlsearch
 set shortmess+=a  " use [+], [RO], [w] for modified, read-only, ...
 set wildignore+=*.so,*.swp,*.zip,*.pyc,*/.svn/*,*/.git/*,*/.hg/*
 if exists('+colorcolumn')
-    set colorcolumn=+1     " highlight the textwidth+1 column
+    let &colorcolumn=join(range(80,999),",")
 endif
 highlight Pmenu ctermbg=green cterm=bold " set completion menu color and style
-
+highlight clear SpellBad
+highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline " underline errors
+highlight ColorColumn ctermbg=235
+highlight Search cterm=NONE ctermfg=grey ctermbg=95
 
 " Remap esc
 map! òò <C-c>
@@ -57,18 +60,22 @@ nnoremap <silent><leader>n :set invrelativenumber invnumber<Esc>
 " " ` is more useful but harder to type, so swap them
 nnoremap ' `
 nnoremap ` '
+map <F2> :NERDTreeToggle<CR>
 
 " Close vim on :q if NERDTree is the only opened buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " In NERDTree filelist, ignore some file types
 let NERDTreeIgnore = ['\.py[co]$', '__pycache__', '\.o$']
 
+let g:SuperTabDefaultCompletionType = 'context'
+let g:SuperTabDefaultCompletionType = 'context'
 
 nmap <C-p> <Plug>yankstack_substitute_older_paste
 nmap <C-P> <Plug>yankstack_substitute_newer_paste
-if exists(':yankstack#setup')
+try
     call yankstack#setup()  " must setup yankstack before remapping Y
-endif
+catch
+endtry
 " Make Y behave like C and D
 nnoremap Y y$
 
