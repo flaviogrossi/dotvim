@@ -86,7 +86,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let NERDTreeIgnore = ['\.py[co]$', '__pycache__', '\.o$']
 
 let g:SuperTabDefaultCompletionType = 'context'
-let g:SuperTabDefaultCompletionType = 'context'
 
 nmap <C-p> <Plug>yankstack_substitute_older_paste
 nmap <C-P> <Plug>yankstack_substitute_newer_paste
