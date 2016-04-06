@@ -59,12 +59,13 @@ set hlsearch
 set shortmess+=a  " use [+], [RO], [w] for modified, read-only, ...
 set wildignore+=*.so,*.swp,*.zip,*.pyc,*/.svn/*,*/.git/*,*/.hg/*
 if exists('+colorcolumn')
-    set colorcolumn=+1     " highlight the textwidth+1 column
+    let &colorcolumn=join(range(80,999),",")
 endif
 highlight Pmenu ctermbg=green cterm=bold " set completion menu color and style
 highlight clear SpellBad
 highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline " underline errors
-
+highlight ColorColumn ctermbg=235
+highlight Search cterm=NONE ctermfg=grey ctermbg=95
 
 " Remap esc
 map! òò <C-c>
