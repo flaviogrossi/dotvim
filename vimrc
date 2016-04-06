@@ -62,6 +62,8 @@ if exists('+colorcolumn')
     set colorcolumn=+1     " highlight the textwidth+1 column
 endif
 highlight Pmenu ctermbg=green cterm=bold " set completion menu color and style
+highlight clear SpellBad
+highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline " underline errors
 
 
 " Remap esc
