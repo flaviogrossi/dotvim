@@ -48,7 +48,7 @@ set hidden
 set ttyfast
 set gdefault  " replace every occurence in a line by default
 set textwidth=79
-set formatoptions="cqj"
+set formatoptions=cqj
 set splitright " open new vsplit to the right
 set splitbelow " open new split at the bottom
 set switchbuf=useopen  " if a buffer is already opened, switch to it
