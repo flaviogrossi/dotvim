@@ -20,6 +20,7 @@ Plug 'vim-scripts/scratch.vim'
 " Plug 'jacquesbh/vim-showmarks'
 " don't close win when closing buffer
 Plug 'moll/vim-bbye'
+Plug 'dyng/ctrlsf.vim'
 
 " Plug 'scrooloose/syntastic', { 'for': 'python' }
 Plug 'kevinw/pyflakes-vim', { 'for': 'python' }
