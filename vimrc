@@ -32,6 +32,7 @@ Plug 'wting/rust.vim', { 'for': 'rust' }
 Plug 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX', { 'for': 'tex' }
 Plug 'rbonvall/vim-textobj-latex', { 'for': 'tex' }
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
 call plug#end()
 
