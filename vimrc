@@ -63,6 +63,7 @@ set list
 set hlsearch
 set shortmess+=a  " use [+], [RO], [w] for modified, read-only, ...
 set wildignore+=*.so,*.swp,*.zip,*.pyc,*/.svn/*,*/.git/*,*/.hg/*
+set wildmode=longest:list,full
 if exists('+colorcolumn')
     let cc_range = []
     for i in range(1, 999)
