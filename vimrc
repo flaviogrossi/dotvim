@@ -24,7 +24,7 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'tpope/vim-sleuth'
 
 " Plug 'scrooloose/syntastic', { 'for': 'python' }
-Plug 'kevinw/pyflakes-vim', { 'for': 'python' }
+Plug 'flaviogrossi/pyflakes-vim', { 'for': 'python' }
 " Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'bps/vim-textobj-python', { 'for': 'python' }
 Plug 'hallettj/jslint.vim', { 'for': 'javascript' }
