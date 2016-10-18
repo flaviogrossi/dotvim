@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 " Use single quotes for plugin names
 Plug 'tpope/vim-sensible'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'ctrlpvim/ctrlp.vim'
