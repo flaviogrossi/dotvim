@@ -22,6 +22,7 @@ Plug 'vim-scripts/scratch.vim'
 Plug 'moll/vim-bbye'
 Plug 'dyng/ctrlsf.vim'
 Plug 'tpope/vim-sleuth'
+Plug 'mileszs/ack.vim'
 
 " Plug 'scrooloose/syntastic', { 'for': 'python' }
 Plug 'flaviogrossi/pyflakes-vim', { 'for': 'python' }
@@ -99,6 +100,9 @@ let NERDTreeIgnore = ['\.py[co]$', '__pycache__', '\.o$']
 let NERDTreeHijackNetrw=1  " use nerdtree as split explorer
 
 let g:SuperTabDefaultCompletionType = 'context'
+
+" Ack
+cnoreabbrev Ack Ack!
 
 nmap <C-p> <Plug>yankstack_substitute_older_paste
 nmap <C-P> <Plug>yankstack_substitute_newer_paste
