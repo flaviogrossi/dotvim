@@ -25,10 +25,11 @@ Plug 'tpope/vim-sleuth'
 Plug 'mileszs/ack.vim'
 
 " Plug 'scrooloose/syntastic', { 'for': 'python' }
-Plug 'flaviogrossi/pyflakes-vim', { 'for': 'python' }
+" Plug 'flaviogrossi/pyflakes-vim', { 'for': 'python' }
+Plug 'w0rp/ale'
 " Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'bps/vim-textobj-python', { 'for': 'python' }
-Plug 'hallettj/jslint.vim', { 'for': 'javascript' }
+" Plug 'hallettj/jslint.vim', { 'for': 'javascript' }
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'wting/rust.vim', { 'for': 'rust' }
 Plug 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX', { 'for': 'tex' }
