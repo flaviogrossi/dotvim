@@ -110,5 +110,7 @@ hi Error	cterm=bold ctermfg=7 ctermbg=1
 hi ColorColumn	guibg=grey25
 hi LineNr guifg=grey30
 
+hi SignColumn guibg=grey25
+
 
 "vim: sw=4
