@@ -27,6 +27,7 @@ Plug 'mileszs/ack.vim'
 " Plug 'scrooloose/syntastic', { 'for': 'python' }
 " Plug 'flaviogrossi/pyflakes-vim', { 'for': 'python' }
 Plug 'w0rp/ale'
+Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 " Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'bps/vim-textobj-python', { 'for': 'python' }
 " Plug 'hallettj/jslint.vim', { 'for': 'javascript' }
@@ -121,6 +122,9 @@ let g:LargeFile=5  " large file is when size is > 5MB
 " do not set nu or fc behind my back using vim modeline
 autocmd BufWinEnter * silent setlocal nonumber foldcolumn=0
 
+" change alchemist default jump to definition
+let g:alchemist_tag_map = 'gd'
+let g:alchemist_tag_stack_map = 'gb'
 
 augroup reload_vimrc " {
     autocmd!
