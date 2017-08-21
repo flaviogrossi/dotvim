@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 " Use single quotes for plugin names
 Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'sjl/gundo.vim'
@@ -23,6 +23,10 @@ Plug 'moll/vim-bbye'
 Plug 'dyng/ctrlsf.vim'
 Plug 'tpope/vim-sleuth'
 Plug 'mileszs/ack.vim'
+
+" lightline
+Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-gitbranch'
 
 " Plug 'scrooloose/syntastic', { 'for': 'python' }
 " Plug 'flaviogrossi/pyflakes-vim', { 'for': 'python' }
@@ -102,6 +106,18 @@ let NERDTreeIgnore = ['\.py[co]$', '__pycache__', '\.o$']
 let NERDTreeHijackNetrw=1  " use nerdtree as split explorer
 
 let g:SuperTabDefaultCompletionType = 'context'
+
+" configure lightline plugin
+set noshowmode
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'gitbranch#name'
+      \ },
+      \ }
 
 " Ack
 cnoreabbrev Ack Ack!
