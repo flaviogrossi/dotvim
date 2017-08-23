@@ -112,12 +112,15 @@ set noshowmode
 let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'filetype' ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'gitbranch#name'
       \ },
-      \ }
+  \ }
 
 " Ack
 cnoreabbrev Ack Ack!
