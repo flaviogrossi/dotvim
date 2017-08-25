@@ -135,6 +135,7 @@ endtry
 nnoremap Y y$
 
 let g:ctrlp_map = '<c-t>'  " default c-p is already used by yankstack
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard'] " ignore untracked files
 
 let g:LargeFile=5  " large file is when size is > 5MB
 
