@@ -102,7 +102,7 @@ let g:netrw_liststyle=3    " treeview for netrw
 " Close vim on :q if NERDTree is the only opened buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " In NERDTree filelist, ignore some file types
-let NERDTreeIgnore = ['\.py[co]$', '__pycache__', '\.o$']
+let NERDTreeIgnore = ['\.py[co]$', '__pycache__', '\.o$', '\.lo$', '\.la$']
 let NERDTreeHijackNetrw=1  " use nerdtree as split explorer
 
 let g:SuperTabDefaultCompletionType = 'context'
