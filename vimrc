@@ -22,7 +22,6 @@ Plug 'vim-scripts/scratch.vim'
 Plug 'moll/vim-bbye'
 Plug 'dyng/ctrlsf.vim'
 Plug 'tpope/vim-sleuth'
-Plug 'mileszs/ack.vim'
 
 " lightline
 Plug 'itchyny/lightline.vim'
@@ -122,8 +121,17 @@ let g:lightline = {
       \ },
   \ }
 
-" Ack
-cnoreabbrev Ack Ack!
+" remap CtrlSF commands
+nmap     <C-F>f <Plug>CtrlSFPrompt
+vmap     <C-F>f <Plug>CtrlSFVwordExec
+nmap     <C-F>n <Plug>CtrlSFCwordPath
+nnoremap <C-F>t :CtrlSFToggle<CR>
+let g:ctrlsf_mapping = {
+            \ "popenf"  : "p",
+            \ "popen"   : "P",
+            \ "next": "n",
+            \ "prev": "N",
+            \ }
 
 nmap <C-p> <Plug>yankstack_substitute_older_paste
 nmap <C-P> <Plug>yankstack_substitute_newer_paste
