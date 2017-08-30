@@ -122,10 +122,10 @@ let g:lightline = {
   \ }
 
 " remap CtrlSF commands
-nmap     <C-F>f <Plug>CtrlSFPrompt
-vmap     <C-F>f <Plug>CtrlSFVwordExec
-nmap     <C-F>n <Plug>CtrlSFCwordPath
-nnoremap <C-F>t :CtrlSFToggle<CR>
+nmap     <leader>f <Plug>CtrlSFPrompt
+vmap     <leader>f <Plug>CtrlSFVwordExec
+nmap     <leader>n <Plug>CtrlSFCwordPath
+nnoremap <leader>t :CtrlSFToggle<CR>
 let g:ctrlsf_mapping = {
             \ "popenf"  : "p",
             \ "popen"   : "P",
