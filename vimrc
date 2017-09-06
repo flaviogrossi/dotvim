@@ -41,6 +41,7 @@ Plug 'rbonvall/vim-textobj-latex', { 'for': 'tex' }
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
