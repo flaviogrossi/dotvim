@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 " Use single quotes for plugin names
 Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree'
-" Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'sjl/gundo.vim'
@@ -22,6 +21,7 @@ Plug 'vim-scripts/scratch.vim'
 Plug 'moll/vim-bbye'
 Plug 'dyng/ctrlsf.vim'
 Plug 'tpope/vim-sleuth'
+Plug 'sheerun/vim-polyglot'
 
 " lightline
 Plug 'itchyny/lightline.vim'
@@ -34,12 +34,11 @@ Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 " Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'bps/vim-textobj-python', { 'for': 'python' }
 " Plug 'hallettj/jslint.vim', { 'for': 'javascript' }
-Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'wting/rust.vim', { 'for': 'rust' }
 Plug 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX', { 'for': 'tex' }
 Plug 'rbonvall/vim-textobj-latex', { 'for': 'tex' }
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'mhinz/vim-mix-format', { 'for': 'elixir' }
 Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
 Plug 'editorconfig/editorconfig-vim'
 
@@ -98,6 +97,9 @@ nnoremap ` '
 map <F2> :NERDTreeToggle<CR>
 
 let g:netrw_liststyle=3    " treeview for netrw
+
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_on_insert_leave = 1
 
 " Close vim on :q if NERDTree is the only opened buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
