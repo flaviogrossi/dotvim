@@ -1,3 +1,7 @@
+let g:ale_completion_enabled = 1
+let g:ale_completion_delay = 1500
+let g:ale_lint_delay = 1500
+
 call plug#begin('~/.vim/plugged')
 " Use single quotes for plugin names
 Plug 'tpope/vim-sensible'
@@ -27,10 +31,12 @@ Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 
+Plug 'vim-scripts/ZoomWin'
+
 " Plug 'scrooloose/syntastic', { 'for': 'python' }
 " Plug 'flaviogrossi/pyflakes-vim', { 'for': 'python' }
 Plug 'w0rp/ale'
-Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
+" Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 " Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 Plug 'bps/vim-textobj-python', { 'for': 'python' }
 " Plug 'hallettj/jslint.vim', { 'for': 'javascript' }
@@ -38,6 +44,7 @@ Plug 'wting/rust.vim', { 'for': 'rust' }
 Plug 'vim-scripts/LaTeX-Suite-aka-Vim-LaTeX', { 'for': 'tex' }
 Plug 'rbonvall/vim-textobj-latex', { 'for': 'tex' }
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'andyl/vim-textobj-elixir', { 'for': 'elixir' }
 Plug 'mhinz/vim-mix-format', { 'for': 'elixir' }
 Plug 'artur-shaik/vim-javacomplete2', { 'for': 'java' }
 Plug 'editorconfig/editorconfig-vim'
@@ -98,8 +105,13 @@ map <F2> :NERDTreeToggle<CR>
 
 let g:netrw_liststyle=3    " treeview for netrw
 
-let g:ale_lint_on_text_changed = 'normal'
-let g:ale_lint_on_insert_leave = 1
+let g:ale_elixir_elixir_ls_release = '/home/flavio/src/elixir-ls/release'
+
+" let g:ale_lint_on_text_changed = 'normal'
+" let g:ale_lint_on_insert_leave = 1
+
+" let g:ale_linters = {'elixir': ['credo', 'dialyxir', 'elixir-ls']}
+let g:ale_linters = {'elixir': ['credo', 'elixir-ls']}
 
 " Close vim on :q if NERDTree is the only opened buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
@@ -107,7 +119,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let NERDTreeIgnore = ['\.py[co]$', '__pycache__', '\.o$', '\.lo$', '\.la$']
 let NERDTreeHijackNetrw=1  " use nerdtree as split explorer
 
-let g:SuperTabDefaultCompletionType = 'context'
+" let g:SuperTabDefaultCompletionType = 'context'
 
 " configure lightline plugin
 set noshowmode
@@ -154,8 +166,13 @@ let g:LargeFile=5  " large file is when size is > 5MB
 autocmd BufWinEnter * silent setlocal nonumber foldcolumn=0
 
 " change alchemist default jump to definition
-let g:alchemist_tag_map = 'gd'
-let g:alchemist_tag_stack_map = 'gb'
+" let g:alchemist_tag_map = 'gd'
+" let g:alchemist_tag_stack_map = 'gb'
+
+nnoremap <Leader>r :ALEFindReferences<enter>
+nnoremap gd :ALEGoToDefinition<enter>
+nnoremap gb <C-o>
+nnoremap K :ALEHover<enter>
 
 augroup reload_vimrc " {
     autocmd!
