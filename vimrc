@@ -90,6 +90,9 @@ highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline " unde
 highlight ColorColumn ctermbg=235
 highlight Search cterm=NONE ctermfg=grey ctermbg=95
 
+" no errorbell
+set noeb vb t_vb=
+
 " Remap esc
 map! òò <C-c>
 vmap òò <Esc>

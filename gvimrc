@@ -1,5 +1,8 @@
 colorscheme mydesert
 
+" no errorbell
+set vb t_vb=
+
 highlight Pmenu guibg=darkcyan gui=bold  " set completion menu color and style
 
 " remove toolbar, menu and scrollbars
