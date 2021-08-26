@@ -114,7 +114,11 @@ let g:LargeFile=5  " large file is when size is > 5MB
 " do not set nu or fc behind my back using vim modeline
 autocmd BufWinEnter * silent setlocal nonumber foldcolumn=0
 
-" configure coc
+""""" coc.nvim configuration
+
+" use system node to avoid version managed by node manager
+let g:coc_node_path = '/usr/bin/node'
+
 " use tab for completion
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -160,6 +164,7 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
 
+""""" end coc.nvim configuration
 
 
 augroup reload_vimrc " {
