@@ -9,6 +9,7 @@ Plug 'nelstrom/vim-visual-star-search'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-indent'
 Plug 'vim-scripts/LargeFile'
+Plug 'scrooloose/nerdtree'
 
 Plug 'moll/vim-bbye'   " delete buffers (close files) without closing your windows
 Plug 'tpope/vim-sleuth'  " Heuristically set buffer options
@@ -27,7 +28,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " maybe use
 " Plug 'dyng/ctrlsf.vim'
 " Plug 'vim-scripts/scratch.vim'
-" Plug 'scrooloose/nerdtree'
 " Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'sjl/gundo.vim'
 " Plug 'ervandew/supertab'
@@ -90,6 +90,13 @@ nnoremap ' `
 nnoremap ` '
 
 let g:netrw_liststyle=3    " treeview for netrw
+
+" Close vim on :q if NERDTree is the only opened buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" In NERDTree filelist, ignore some file types
+let NERDTreeIgnore = ['\.py[co]$', '__pycache__', '\.o$', '\.lo$', '\.la$']
+let NERDTreeHijackNetrw=1  " use nerdtree as split explorer
+
 
 " configure lightline plugin
 set noshowmode
