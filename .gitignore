@@ -2,4 +2,4 @@ plugged/
 autoload/plug.vim
 .netrwhist
 spell/
-*.sw[op]
+*.sw[onp]
