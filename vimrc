@@ -19,6 +19,9 @@ Plug 'sheerun/vim-polyglot'  " vim language pack
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 
+" fuzzy file finder
+Plug 'ctrlpvim/ctrlp.vim'
+
 Plug 'vim-scripts/ZoomWin'
 
 Plug 'editorconfig/editorconfig-vim'
@@ -96,6 +99,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " In NERDTree filelist, ignore some file types
 let NERDTreeIgnore = ['\.py[co]$', '__pycache__', '\.o$', '\.lo$', '\.la$']
 let NERDTreeHijackNetrw=1  " use nerdtree as split explorer
+
+
+" configure ctrlp plugin
+let g:ctrlp_map = '<c-t>'  " default c-p is already used by yankstack
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard'] " ignore untracked files
 
 
 " configure lightline plugin
