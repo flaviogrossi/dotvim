@@ -22,6 +22,9 @@ Plug 'itchyny/vim-gitbranch'
 " fuzzy file finder
 Plug 'ctrlpvim/ctrlp.vim'
 
+" save a yank stack to allow pasting old text
+Plug 'maxbrunsfeld/vim-yankstack'
+
 Plug 'vim-scripts/ZoomWin'
 
 Plug 'editorconfig/editorconfig-vim'
@@ -31,11 +34,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " maybe use
 " Plug 'dyng/ctrlsf.vim'
 " Plug 'vim-scripts/scratch.vim'
-" Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'sjl/gundo.vim'
-" Plug 'ervandew/supertab'
-" Plug 'vim-scripts/matchit.zip'
-" Plug 'maxbrunsfeld/vim-yankstack'
 
 call plug#end()
 
@@ -120,6 +119,15 @@ let g:lightline = {
       \   'gitbranch': 'gitbranch#name'
       \ },
   \ }
+
+
+" configure yankstack
+nmap <C-p> <Plug>yankstack_substitute_older_paste
+nmap <C-P> <Plug>yankstack_substitute_newer_paste
+try
+    call yankstack#setup()  " must setup yankstack before remapping Y
+catch
+endtry
 
 " Make Y behave like C and D
 nnoremap Y y$
