@@ -31,6 +31,10 @@ Plug 'editorconfig/editorconfig-vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" lang specific
+" add the 'e' text object in elixir
+Plug 'andyl/vim-textobj-elixir', { 'for': 'elixir' }
+
 " maybe use
 " Plug 'dyng/ctrlsf.vim'
 " Plug 'vim-scripts/scratch.vim'
