@@ -67,17 +67,10 @@ set hlsearch
 set shortmess+=a  " use [+], [RO], [w] for modified, read-only, ...
 set wildignore+=*.so,*.swp,*.zip,*.pyc,*/.svn/*,*/.git/*,*/.hg/*
 set wildmode=longest:list,full
-if exists('+colorcolumn')
-    let cc_range = []
-    for i in range(1, 999)
-        let cc_range += ["+".i]
-    endfor
-    let &colorcolumn=join(cc_range, ",")
-endif
+
 highlight Pmenu ctermbg=green cterm=bold " set completion menu color and style
 highlight clear SpellBad
 highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline " underline errors
-highlight ColorColumn ctermbg=235
 highlight Search cterm=NONE ctermfg=grey ctermbg=95
 
 " no errorbell
