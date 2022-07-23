@@ -88,6 +88,9 @@ nnoremap <silent><leader>n :set invrelativenumber invnumber<Esc>
 nnoremap ' `
 nnoremap ` '
 
+" set directory to use for swapfiles
+set directory=/var/tmp//
+
 let g:netrw_liststyle=3    " treeview for netrw
 
 " Close vim on :q if NERDTree is the only opened buffer
@@ -136,6 +139,9 @@ autocmd BufWinEnter * silent setlocal nonumber foldcolumn=0
 
 """"" coc.nvim configuration
 
+" install these extensions
+let g:coc_global_extensions = ['coc-diagnostic', 'coc-elixir', 'coc-tsserver']
+
 " use system node to avoid version managed by node manager
 let g:coc_node_path = '/usr/bin/node'
 
@@ -153,8 +159,8 @@ endfunction
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>j <Plug>(coc-diagnostic-prev)
+nmap <silent> <leader>k <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
